@@ -24,6 +24,7 @@ const SCHEMA = {
   users: 'id TEXT PRIMARY KEY, email TEXT UNIQUE, data TEXT NOT NULL',
   addresses: 'id TEXT PRIMARY KEY, userId TEXT NOT NULL, data TEXT NOT NULL',
   contact_messages: 'id TEXT PRIMARY KEY, data TEXT NOT NULL',
+  course_inquiries: 'id TEXT PRIMARY KEY, data TEXT NOT NULL',
   images: 'id TEXT PRIMARY KEY, data TEXT NOT NULL',
 };
 

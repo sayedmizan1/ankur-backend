@@ -9,3 +9,9 @@ export const PORT = Number(process.env.PORT) || 4000;
 // Comma-separated list of allowed origins (e.g. "https://soapveda.netlify.app,https://www.soapveda.com"),
 // or "*" to allow any origin (fine for local/demo use, restrict this in production).
 export const CORS_ORIGINS = (process.env.CORS_ORIGIN || '*').split(',').map((origin) => origin.trim());
+
+// Gmail SMTP credentials for course-inquiry email notifications.
+// Use a Gmail App Password (not your regular Gmail password):
+//   https://myaccount.google.com/apppasswords
+export const GMAIL_USER = process.env.GMAIL_USER || '';
+export const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD || '';
