@@ -15,3 +15,7 @@ export const CORS_ORIGINS = (process.env.CORS_ORIGIN || '*').split(',').map((ori
 //   https://myaccount.google.com/apppasswords
 export const GMAIL_USER = process.env.GMAIL_USER || '';
 export const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD || '';
+
+// Razorpay secrets (for backend order creation and verification)
+export const RAZORPAY_KEY_ID = process.env.VITE_RAZORPAY_KEY_ID || process.env.RAZORPAY_KEY_ID || '';
+export const RAZORPAY_KEY_SECRET = process.env.RAZORPAY_KEY_SECRET || '';

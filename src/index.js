@@ -20,6 +20,7 @@ import inquiriesRouter from './routes/inquiries.js';
 import uploadRouter from './routes/upload.js';
 import customersRouter from './routes/customers.js';
 import courseInquiriesRouter from './routes/courseInquiries.js';
+import paymentRouter from './routes/payment.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -47,6 +48,7 @@ app.use('/api/addresses', addressesRouter);
 app.use('/api/inquiries', inquiriesRouter);
 app.use('/api/upload', uploadRouter);
 app.use('/api/course-inquiries', courseInquiriesRouter);
+app.use('/api/payment', paymentRouter);
 
 // In production, serve the built frontend from the same server/port so only one process (and
 // one tunnel/host) is needed. Run `npm run build` at the repo root first to generate /dist.
