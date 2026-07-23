@@ -20,7 +20,7 @@ function generateOrderNumber() {
 // Guest checkout is allowed, so this endpoint is intentionally public - but ALL pricing is
 // recomputed here from the database. A tampered subtotal/discount/total in the request body is
 // simply ignored (never trust client-supplied prices).
-router.post('/', optionalAuth, (req, res) => {
+router.post('/', authenticate, (req, res) => {
   const { items, address, couponCode, paymentMethod, customerEmail, customerPhone } = req.body ?? {};
 
   if (!Array.isArray(items) || items.length === 0) return res.status(400).json({ error: 'Your cart is empty.' });
